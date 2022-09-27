@@ -258,16 +258,29 @@ namespace WpfApp1
                         CBMes.Text = "";
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Заполните поля");
+                }
             }
             else if (CBGoroscop.SelectedIndex == 1)
             {
-
+                if (TBvost.Text != "")
+                {
+                    if ((int.Parse(TBzn.Text) >= 19 && int.Parse(TBzn.Text) <= 28 && CBMes.SelectedIndex == 1) || (int.Parse(TBzn.Text) >= 1 && int.Parse(TBzn.Text) <= 20 && CBMes.SelectedIndex == 2))
+                    {
+                        TBOtvet.Text = ($"Дата рождения {TBzn.Text} {CBMes.Text}\nВаш знак зодиака Рыбы");
+                        TBvost.Text = "";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Заполните поля");
+                }
             }
             else
-            {
-               
-                    MessageBox.Show("Введите данные все");
-               
+            {              
+                    MessageBox.Show("Выберите");             
             }
 
         }
