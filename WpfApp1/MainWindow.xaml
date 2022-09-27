@@ -9,24 +9,49 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="70"></RowDefinition>
-            <RowDefinition Height="150"></RowDefinition>
-            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="250"></RowDefinition>
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <TextBlock Text="Выберите что хотите узнать"/>
-
+        <Grid Grid.Row="0"  >
+            <TextBlock >Выберите что хотите узнать</TextBlock>
         </Grid>
-        <Grid Grid.Row="1">
-            <StackPanel>
+        <Grid Grid.Row="1" >
+            <StackPanel >
                 <ComboBox Margin="30,10,30,0">
                     <ComboBoxItem>Определить знак зодиака</ComboBoxItem>
                     <ComboBoxItem>Определить восточный гороскоп</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
-
+            <StackPanel>
+                <TextBox Margin="100,80,100,0"> Введите дату</TextBox>
+                <ComboBox Margin="100,70,100,0">
+                    <ComboBoxItem>Январь</ComboBoxItem>
+                    <ComboBoxItem>Февраль</ComboBoxItem>
+                    <ComboBoxItem>Март</ComboBoxItem>
+                    <ComboBoxItem>Апрель</ComboBoxItem>
+                    <ComboBoxItem>Май</ComboBoxItem>
+                    <ComboBoxItem>Июнь</ComboBoxItem>
+                    <ComboBoxItem>Июль</ComboBoxItem>
+                    <ComboBoxItem>Август</ComboBoxItem>
+                    <ComboBoxItem>Сентябрь</ComboBoxItem>
+                    <ComboBoxItem>Октябрь</ComboBoxItem>
+                    <ComboBoxItem>Ноябрь</ComboBoxItem>
+                    <ComboBoxItem>Декабрь</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
         </Grid>
-       
+        <Grid Grid.Row="2">
+            <StackPanel>
+                <Button Name="BTNVvod" Content="Получить результат" Margin="30,10,30,0">
+                    <Button.ToolTip>
+                        <ToolTip>
+                            Нажмите для того, чтобы узнать ответ
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+                <TextBlock Margin="40">Ответ:</TextBlock>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>
