@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Гороскоп" Height="450" Width="700">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Выберите что хотите узнать"/>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <ComboBox Margin="30,10,30,0">
+                    <ComboBoxItem>Определить знак зодиака</ComboBoxItem>
+                    <ComboBoxItem>Определить восточный гороскоп</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+        </Grid>
+       
     </Grid>
 </Window>
