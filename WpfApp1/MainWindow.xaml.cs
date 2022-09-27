@@ -24,5 +24,26 @@ namespace WpfApp1
         {
             InitializeComponent();
         }
+
+        private void CBGoroscop_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (CBGoroscop.SelectedIndex)
+            {
+                case 0:
+                    TBOtvet.Text = "";
+                    TBzn.Visibility = Visibility.Visible;
+                    CBMes.Visibility = Visibility.Visible;
+                    TBvost.Visibility = Visibility.Collapsed;
+                    break;
+                case 1:
+                    TBOtvet.Text = "";
+                    TBzn.Visibility = Visibility.Collapsed;
+                    CBMes.Visibility = Visibility.Collapsed;
+                    TBvost.Visibility = Visibility.Visible;
+                    break;
+
+
+            }
+        }
     }
 }
