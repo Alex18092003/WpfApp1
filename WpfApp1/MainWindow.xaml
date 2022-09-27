@@ -18,14 +18,14 @@
         <Grid Grid.Row="1" >
             <StackPanel >
                 <ComboBox Margin="30,10,30,0" Name="CBGoroscop" SelectionChanged="CBGoroscop_SelectionChanged">
-                    <ComboBoxItem>Определить знак зодиака</ComboBoxItem>
-                    <ComboBoxItem>Определить восточный гороскоп</ComboBoxItem>
+                    <ComboBoxItem>Определить свой знак зодиака</ComboBoxItem>
+                    <ComboBoxItem>Определить, кто ты по восточному гороскопу</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel>
-                <TextBox Margin="100,80,100,0" Name="TBzn" Visibility="Collapsed"> Введите дату</TextBox>
-                <TextBox Margin="100,100,100,0" Name="TBvost" Visibility="Collapsed">Введите дату рождения</TextBox>
-                <ComboBox Margin="100,70,100,0" Name="CBMes" Visibility="Collapsed">
+                <TextBox Margin="100,80,100,0" Name="TBzn" Visibility="Collapsed" PreviewTextInput="TBzn_PreviewTextInput"> Введите дату</TextBox>
+                <TextBox Margin="100,100,100,0" Name="TBvost" Visibility="Collapsed" PreviewTextInput="TBvost_PreviewTextInput">Введите дату рождения</TextBox>
+                <ComboBox Margin="100,70,100,0" Name="CBMes" Visibility="Collapsed" SelectionChanged="CBMes_SelectionChanged">
                     <ComboBoxItem>Январь</ComboBoxItem>
                     <ComboBoxItem>Февраль</ComboBoxItem>
                     <ComboBoxItem>Март</ComboBoxItem>
