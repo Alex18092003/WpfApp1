@@ -43,7 +43,7 @@
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel>
-                <Button Name="BTNVvod" Content="Получить результат" Margin="30,10,30,0">
+                <Button Name="BTNVvod" Content="Получить результат" Margin="30,10,30,0" Click="BTNVvod_Click">
                     <Button.ToolTip>
                         <ToolTip>
                             Нажмите для того, чтобы узнать ответ
