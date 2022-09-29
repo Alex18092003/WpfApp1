@@ -253,7 +253,7 @@ namespace WpfApp1
                 }
                 else
                 {
-                    MessageBox.Show("Заполните все поля");
+                    MessageBox.Show("Заполните все поля\nВведите день вашего рождения\nВыберите месяц из раскрывающегося списка");
                 }
             }
             else if (CBGoroscop.SelectedIndex == 1)
@@ -269,25 +269,69 @@ namespace WpfApp1
                         if (int.Parse(TBvost.Text) == 1924 || int.Parse(TBvost.Text) == 1936 || int.Parse(TBvost.Text) == 1948 || int.Parse(TBvost.Text) == 1960 || int.Parse(TBvost.Text) == 1972 || int.Parse(TBvost.Text) == 1984 || int.Parse(TBvost.Text) == 1996 || int.Parse(TBvost.Text) == 2008 || int.Parse(TBvost.Text) == 2020)
                         {
                             TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Крыса ");
+                            TBvost.Text = "";
                         }
                         else if(int.Parse(TBvost.Text) == 1925 || int.Parse(TBvost.Text) == 1937 || int.Parse(TBvost.Text) == 1949 || int.Parse(TBvost.Text) == 1961 || int.Parse(TBvost.Text) == 1973 || int.Parse(TBvost.Text) == 1985 || int.Parse(TBvost.Text) == 1997 || int.Parse(TBvost.Text) == 2009 || int.Parse(TBvost.Text) == 2021)
                         {
                             TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Бык ");
+                            TBvost.Text = "";
                         }
                         else if (int.Parse(TBvost.Text) == 1926 || int.Parse(TBvost.Text) == 1938 || int.Parse(TBvost.Text) == 1950 || int.Parse(TBvost.Text) == 1962 || int.Parse(TBvost.Text) == 1974 || int.Parse(TBvost.Text) == 1986 || int.Parse(TBvost.Text) == 1998 || int.Parse(TBvost.Text) == 2010 || int.Parse(TBvost.Text) == 2022)
                         {
                             TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Тигр ");
+                            TBvost.Text = "";
                         }
                         else if (int.Parse(TBvost.Text) == 1927 || int.Parse(TBvost.Text) == 1939 || int.Parse(TBvost.Text) == 1951 || int.Parse(TBvost.Text) == 1963 || int.Parse(TBvost.Text) == 1975 || int.Parse(TBvost.Text) == 1987 || int.Parse(TBvost.Text) == 1999 || int.Parse(TBvost.Text) == 2011)
                         {
-                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Тигр ");
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Кролик ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1928 || int.Parse(TBvost.Text) == 1940 || int.Parse(TBvost.Text) == 1952 || int.Parse(TBvost.Text) == 1964 || int.Parse(TBvost.Text) == 1976 || int.Parse(TBvost.Text) == 1988 || int.Parse(TBvost.Text) == 2000 || int.Parse(TBvost.Text) == 2012)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Дракон ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1929 || int.Parse(TBvost.Text) == 1941 || int.Parse(TBvost.Text) == 1953 || int.Parse(TBvost.Text) == 1965 || int.Parse(TBvost.Text) == 1977 || int.Parse(TBvost.Text) == 1989 || int.Parse(TBvost.Text) == 2001 || int.Parse(TBvost.Text) == 2013)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Змея ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1930 || int.Parse(TBvost.Text) == 1942 || int.Parse(TBvost.Text) == 1954 || int.Parse(TBvost.Text) == 1966 || int.Parse(TBvost.Text) == 1978 || int.Parse(TBvost.Text) == 1990 || int.Parse(TBvost.Text) == 2002 || int.Parse(TBvost.Text) == 2014)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Лошадь ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1931 || int.Parse(TBvost.Text) == 1943 || int.Parse(TBvost.Text) == 1955 || int.Parse(TBvost.Text) == 1967 || int.Parse(TBvost.Text) == 1979 || int.Parse(TBvost.Text) == 1991 || int.Parse(TBvost.Text) == 2003 || int.Parse(TBvost.Text) == 2015)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Овца ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1932 || int.Parse(TBvost.Text) == 1944 || int.Parse(TBvost.Text) == 1956 || int.Parse(TBvost.Text) == 1968 || int.Parse(TBvost.Text) == 1980 || int.Parse(TBvost.Text) == 1992 || int.Parse(TBvost.Text) == 2004 || int.Parse(TBvost.Text) == 2016)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Обезьяна ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1933 || int.Parse(TBvost.Text) == 1945 || int.Parse(TBvost.Text) == 1957 || int.Parse(TBvost.Text) == 1969 || int.Parse(TBvost.Text) == 1981|| int.Parse(TBvost.Text) == 1993 || int.Parse(TBvost.Text) == 2005 || int.Parse(TBvost.Text) == 2017)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Петух ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1934 || int.Parse(TBvost.Text) == 1946 || int.Parse(TBvost.Text) == 1958 || int.Parse(TBvost.Text) == 1970 || int.Parse(TBvost.Text) == 1982 || int.Parse(TBvost.Text) == 1994 || int.Parse(TBvost.Text) == 2006 || int.Parse(TBvost.Text) == 2018)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Собака ");
+                            TBvost.Text = "";
+                        }
+                        else if (int.Parse(TBvost.Text) == 1935 || int.Parse(TBvost.Text) == 1947 || int.Parse(TBvost.Text) == 1959 || int.Parse(TBvost.Text) == 1971 || int.Parse(TBvost.Text) == 1983 || int.Parse(TBvost.Text) == 1995 || int.Parse(TBvost.Text) == 2007 || int.Parse(TBvost.Text) == 2019)
+                        {
+                            TBOtvet.Text = ($"Год рождения {TBvost.Text} \nВаш восточный знак - Свинья ");
+                            TBvost.Text = "";
                         }
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Заполните поле");
+                    MessageBox.Show("Заполните поле\nВведите свой год рождения");
                 }
             }
             else

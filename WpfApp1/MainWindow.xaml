@@ -6,26 +6,33 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Гороскоп" Height="450" Width="700">
+
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="250"></RowDefinition>
+            <RowDefinition Height="230"></RowDefinition>
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
+         <Grid Grid.RowSpan="3" >
+            <DockPanel>
+        <Image Height="700" Opacity=".2" Source="https://damion.club/uploads/posts/2022-01/1642539014_27-damion-club-p-foni-so-znakami-zodiaka-28.jpg">
+        </Image>
+            </DockPanel>
+        </Grid>
         <Grid Grid.Row="0"  >
-            <TextBlock >Выберите что хотите узнать</TextBlock>
+            <TextBlock Style="{StaticResource tblock}" >Выберите что хотите узнать</TextBlock>
         </Grid>
         <Grid Grid.Row="1" >
             <StackPanel >
-                <ComboBox Margin="30,10,30,0" Name="CBGoroscop" SelectionChanged="CBGoroscop_SelectionChanged">
-                    
+                <ComboBox  Name="CBGoroscop" SelectionChanged="CBGoroscop_SelectionChanged" Style="{StaticResource cbstyle}">
                     <ComboBox.ToolTip>
                         <ToolTip>
                             Нажмите для того, чтобы раскрыть список выбора вариантов
                         </ToolTip>
                     </ComboBox.ToolTip>
-                    <ComboBoxItem>Определить свой знак зодиака</ComboBoxItem>
-                    <ComboBoxItem>Определить, кто ты по восточному гороскопу</ComboBoxItem>
+                    <ComboBoxItem >Определить свой знак зодиака</ComboBoxItem>
+                    <ComboBoxItem>Определить свой восточный знак зодиака</ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <StackPanel>
@@ -42,13 +49,13 @@
                         </ToolTip>
                     </TextBox.ToolTip>
                 </TextBox>
-                <ComboBox Margin="100,70,100,0" Name="CBMes" Visibility="Collapsed" SelectionChanged="CBMes_SelectionChanged">
+                <ComboBox Style="{StaticResource cbstyle}"  Margin="100,70,100,0" Name="CBMes" Visibility="Collapsed" SelectionChanged="CBMes_SelectionChanged"  >
                     <ComboBox.ToolTip>
                         <ToolTip>
                            Введите месяц вашего рождения
                         </ToolTip>
                     </ComboBox.ToolTip>
-                    <ComboBoxItem>Январь</ComboBoxItem>
+                    <ComboBoxItem >Январь</ComboBoxItem>
                     <ComboBoxItem>Февраль</ComboBoxItem>
                     <ComboBoxItem>Март</ComboBoxItem>
                     <ComboBoxItem>Апрель</ComboBoxItem>
@@ -65,16 +72,16 @@
         </Grid>
         <Grid Grid.Row="2">
             <StackPanel>
-                <Button Name="BTNVvod" Content="Получить результат" Margin="30,10,30,0" Click="BTNVvod_Click">
+                <Button Template="{StaticResource btnbutton}"  Name="BTNVvod"  Click="BTNVvod_Click">
                     <Button.ToolTip>
                         <ToolTip>
                             Нажмите для того, чтобы узнать ответ
                         </ToolTip>
                     </Button.ToolTip>
                 </Button>
-                <TextBlock Margin="40" Name="TBOtvet">Ответ:</TextBlock>
+                <TextBlock Style="{StaticResource tblock}" Name="TBOtvet">Ответ:</TextBlock>
             </StackPanel>
         </Grid>
-
+       
     </Grid>
 </Window>
