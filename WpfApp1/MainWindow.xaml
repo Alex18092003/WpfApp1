@@ -80,6 +80,12 @@
                     </Button.ToolTip>
                 </Button>
                 <TextBlock Style="{StaticResource tblock}" Name="TBOtvet">Ответ:</TextBlock>
+                <Button Margin="250,0,10,0" 
+               Width ="150"
+                        Height="30"
+                       Name="BTNFail" Click="BTNFail_Click">
+                    
+                </Button>
             </StackPanel>
         </Grid>
        

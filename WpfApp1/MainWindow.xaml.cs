@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+
 
 namespace WpfApp1
 {
@@ -25,6 +27,49 @@ namespace WpfApp1
             InitializeComponent();
             this.TBzn.PreviewTextInput += new TextCompositionEventHandler(TBzn_PreviewTextInput);
             this.TBvost.PreviewTextInput += new TextCompositionEventHandler(TBzn_PreviewTextInput);
+        }
+
+        struct Goroskopp
+        {
+            public int date;
+            public int month;
+            public int year;
+            //public string concat1() 
+            //{
+            //    return Ваш знак зодиака Рыбы;
+            //}
+        }
+
+        List<Goroskopp> goroskopp = new List<Goroskopp>();
+        static void getData(string path, List<Goroskopp> L)//чтение
+        {
+            using (StreamReader sr = new StreamReader(path))
+            {
+                while (sr.EndOfStream != true)
+                {
+                    string[] array = sr.ReadLine().Split(';');
+                    
+                        L.Add(new Goroskopp()
+                        {
+                           
+                            date = Convert.ToInt32(array[0]),
+                            month = Convert.ToInt32(array[1]),
+                            year = Convert.ToInt32(array[2])
+                         
+                        });
+                    
+                }
+            }
+        }
+
+        private void BTNFail_Click(object sender, RoutedEventArgs e)
+        {
+            getData("horoscopeEastern.csv", goroskopp);
+            foreach (Goroskopp goroskopp in goroskopp)
+            {
+             
+            }
+
         }
 
         private void CBGoroscop_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -150,13 +195,8 @@ namespace WpfApp1
                         {
                             MessageBox.Show("В декабре только 31 день.\nПовторите ввод");
                             TBzn.Text = "";
-                        }
-                       
+                        }       
                         break;
-                    case 12:
-                        break;
-
-
                 }
             }
         }
@@ -253,7 +293,7 @@ namespace WpfApp1
                 }
                 else
                 {
-                    MessageBox.Show("Заполните все поля\nВведите день вашего рождения\nВыберите месяц из раскрывающегося списка");
+                    MessageBox.Show("Заполните все поля\n");
                 }
             }
             else if (CBGoroscop.SelectedIndex == 1)
@@ -340,5 +380,7 @@ namespace WpfApp1
             }
 
         }
+
+    
     }
 }
